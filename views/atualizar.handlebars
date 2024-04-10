@@ -1,0 +1,167 @@
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col">
+      <h4>Editar</h4>
+
+      {{#each post}}
+        {{#dataValues}}
+            <form action="/atualizar" method="POST">      
+            
+        <div class="form-group">
+            <input type="hidden" name="id" class="form-control" value="{{id}}">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            name="nome"
+            placeholder="Digite o nome"
+            value="{{nome}}" 
+          />
+        </div>
+
+          <div class="form-group">
+          <label for="nome">Telefone:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="tel"
+            name="tel"
+            placeholder="Digite o telefone"
+            value="{{tel}}" 
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="end">Endereço:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="end"
+            name="end"
+            placeholder="Digite o Endereço"
+            value="{{end}}" 
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Bairro">Bairro:</label>
+          <input 
+          type="text" 
+          class="form-control" 
+          id="Bairro" 
+          name="Bairro" 
+          placeholder="Digite o Bairro"
+          value="{{Bairro}}" 
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="CEP">CEP:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="CEP"
+            name="CEP"
+            placeholder="00000-000"
+            value="{{CEP}}" 
+          />
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <input 
+          type="text" 
+          class="form-control" 
+          id="cidade" 
+          name="cidade" 
+          placeholder="Digite a Cidade"  value="{{cidade}}" />
+           
+        </div>
+        
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <div class="input-group">
+            <select class="form-control" id="estado" name="estado" value="{{estado}}" >
+              <option value="">Selecione o Estado</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                data-toggle="dropdown"
+              >
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-value="AC">Acre</a>
+                <a class="dropdown-item" href="#" data-value="AL">Alagoas</a>
+                <a class="dropdown-item" href="#" data-value="AP">Amapá</a>
+                <a class="dropdown-item" href="#" data-value="AM">Amazonas</a>
+                <a class="dropdown-item" href="#" data-value="BA">Bahia</a>
+                <a class="dropdown-item" href="#" data-value="CE">Ceará</a>
+                <a class="dropdown-item" href="#" data-value="DF">Distrito
+                  Federal</a>
+                <a class="dropdown-item" href="#" data-value="ES">Espírito Santo</a>
+                <a class="dropdown-item" href="#" data-value="GO">Goiás</a>
+                <a class="dropdown-item" href="#" data-value="MA">Maranhão</a>
+                <a class="dropdown-item" href="#" data-value="MT">Mato Grosso</a>
+                <a class="dropdown-item" href="#" data-value="MS">Mato Grosso do
+                  Sul</a>
+                <a class="dropdown-item" href="#" data-value="MG">Minas Gerais</a>
+                <a class="dropdown-item" href="#" data-value="PA">Pará</a>
+                <a class="dropdown-item" href="#" data-value="PB">Paraíba</a>
+                <a class="dropdown-item" href="#" data-value="PR">Paraná</a>
+                <a class="dropdown-item" href="#" data-value="PE">Pernambuco</a>
+                <a class="dropdown-item" href="#" data-value="PI">Piauí</a>
+                <a class="dropdown-item" href="#" data-value="RJ">Rio de Janeiro</a>
+                <a class="dropdown-item" href="#" data-value="RN">Rio Grande do
+                  Norte</a>
+                <a class="dropdown-item" href="#" data-value="RS">Rio Grande do
+                  Sul</a>
+                <a class="dropdown-item" href="#" data-value="RO">Rondônia</a>
+                <a class="dropdown-item" href="#" data-value="RR">Roraima</a>
+                <a class="dropdown-item" href="#" data-value="SC">Santa Catarina</a>
+                <a class="dropdown-item" href="#" data-value="SP">São Paulo</a>
+                <a class="dropdown-item" href="#" data-value="SE">Sergipe</a>
+                <a class="dropdown-item" href="#" data-value="TO">Tocantins</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Editar</button>
+
+      </form>
+            {{/dataValues}}
+      {{/each}}
+    </div>
+  </div>
+</div>
